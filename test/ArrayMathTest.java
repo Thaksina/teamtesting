@@ -25,10 +25,21 @@ public class ArrayMathTest {
 		y = new double[] { };
 		assertEquals( 0.0, ArrayMath.dotProduct(x, y), TOL);
 	}
-	
-	//TODO Add at least one test for the "typical" case: vectors larger than 1.
-	// Please don't copy my tests. You don't need random numbers (not a good idea
-	// because test results may not be reproducable).
+
+	@Test
+	public void testTypicalVectors() {
+		double[] x = {1, 2, 3};
+		double[] y = {1, 5 ,7};
+		double expected = 32.0;
+		assertEquals(expected, ArrayMath.dotProduct(x, y), TOL);
+		assertEquals(expected, ArrayMath.dotProduct(y, x), TOL);
+
+		double[] a = {12.4, 0.33, 45.0};
+		double[] b = {2.7, 1.2, 8.8};
+		expected = 429.876;
+		assertEquals(expected, ArrayMath.dotProduct(a, b), TOL);
+		assertEquals(expected, ArrayMath.dotProduct(b, a), TOL);
+	}
 
 	@Test
 	public void testDotProductHugeVectors() {
