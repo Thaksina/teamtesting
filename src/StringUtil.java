@@ -13,7 +13,7 @@ public class StringUtil {
 	 */
 	public static int indexOf(String arg, String[] array) {
 		for(int k=0; k<array.length; k++) {
-			if (array[k].equalsIgnoreCase(arg))
+			if (array[k].equals(arg))
 				return k;
 		}
 		return -1;
