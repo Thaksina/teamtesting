@@ -18,5 +18,20 @@ public class StringUtilTest {
 		assertEquals(0, StringUtil.indexOf("Apple", fruit));
 	}
 
+	@Test
+	public void moreTestIndexOf(){
+
+		String[] animal = {"Cat", "Dog", "Dog","Bat"};
+		assertEquals(1, StringUtil.indexOf("Dog", animal));
+
+	}
+
+	@Test
+	public void moreTestIndexOf2(){
+
+		String[] color = {"Blue", "Red", "Yellow","Pink"};
+		assertEquals(-1, StringUtil.indexOf("Green", color));
+	}
+
 	//TODO write more tests. Test other cases.
 }
