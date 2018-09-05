@@ -33,13 +33,16 @@ public class ArrayMathTest {
 		double expected = 32.0;
 		assertEquals(expected, ArrayMath.dotProduct(x, y), TOL);
 		assertEquals(expected, ArrayMath.dotProduct(y, x), TOL);
-
-		double[] a = {12.4, 0.33, 45.0};
-		double[] b = {2.7, 1.2, 8.8};
-		expected = 429.876;
-		assertEquals(expected, ArrayMath.dotProduct(a, b), TOL);
-		assertEquals(expected, ArrayMath.dotProduct(b, a), TOL);
 	}
+
+	@Test
+    public void testDecimalValueVectors() {
+        double[] a = {12.4, 0.33, 45.0};
+        double[] b = {2.7, 1.2, 8.8};
+        double expected = 429.876;
+        assertEquals(expected, ArrayMath.dotProduct(a, b), TOL);
+        assertEquals(expected, ArrayMath.dotProduct(b, a), TOL);
+    }
 
 	@Test
 	public void testDotProductHugeVectors() {
